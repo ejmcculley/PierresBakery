@@ -14,5 +14,13 @@ namespace PierresBakery.Tests
       Bread newBreadOrder = new Bread(1, 5);
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
+    [TestMethod]
+
+    public void BreadCost()
+    {
+      Bread newBreadOrder = new Bread(2, 5);
+      newBreadOrder.BreadCost();
+      Assert.AreEqual(10, newBreadOrder.BreadCost());
+    }
   }
 }

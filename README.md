@@ -29,7 +29,7 @@ _To clone this repository:_
 
 ## Known Bugs
 
-* Not at the moment!
+* Plenty at the moment!
 
 ## License
 MIT License

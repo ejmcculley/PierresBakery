@@ -14,8 +14,14 @@ namespace PierresBakery.Models
     }
     public int BreadCost()
     {
-      if (Amount % 3 == 0);
-      return (Amount * Price) - ((Amount / 3) * 5);
+      if (Amount <= 2) 
+      {
+        return Amount * Price;
+      }
+      else 
+      {
+        return ((Amount % 3) * Price) + (((Amount - (Amount % 3)) / 3) * 10);
+      }
     }
   }
 }

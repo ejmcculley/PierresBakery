@@ -27,9 +27,18 @@ _To clone this repository:_
 5. In your Terminal type "git clone" (without the quotes) then paste the URL you copied above. 
 6. Press 'enter' and the cloned directory should be copied to your current working directory.
 
+_To install C# and .NET:_
+
+1. Download the .NET SDK(Software Development Kit) [here](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-5.0.401-macos-x64-installer)
+2. Launch the installer.
+3. Open or restart your Terminal, and type 'dotnet --version' to see that .NET and C# were installed (you should see a response similar to '5.0.401').
+4. In your Terminal, navigate to PierresBakery.Solution/PierresBakery and type 'dotnet run' to launch the console application.
+5. You will be asked if you would like to order bread or pastries, if you type 'yes' to either, you will be asked for an amount. After your amounts are entered, you will be given a total dollar amount for your order. 
+
+
 ## Known Bugs
 
-* Plenty at the moment!
+* Not at the moment!
 
 ## License
 MIT License

@@ -33,46 +33,43 @@ namespace PierresBakery {
       Console.WriteLine("._________________________________.");
 
       Console.WriteLine("Welcome to Little P's Bakery!");
-      Console.WriteLine("Would you like to order some bread? (Type Y for Yes, N for No");
+      Console.WriteLine("Would you like to order some bread? (Enter Yes or No)");
 
-      string breadAnswer = Console.ReadLine();
-      // if (breadAnswer != "Y" || breadAnswer != "N")
-      // {
-      //   Console.WriteLine("Please enter Y for Yes or N for No");
-      // }
-      if (breadAnswer == "Y")
+      Bread newBreadOrder = new Bread(0, 5);
+      Pastry newPastryOrder = new Pastry(0);
+
+      string initialBreadAnswer = Console.ReadLine();
+      string breadAnswer = initialBreadAnswer.ToLower();
+      if (breadAnswer == "yes")
       {
         Console.WriteLine("How many loaves would you like?");
         string stringAmount = Console.ReadLine();
         int amount = int.Parse(stringAmount);
-        Bread newBreadOrder = new Bread(amount, 5);
+        newBreadOrder.Amount = amount;
       }
       else 
       {
         Console.WriteLine("Watchin' those carbs eh!?");
       }
 
-      Console.WriteLine("Would you like to order some pastries? (Type Y for Yes, N for No");
+      Console.WriteLine("Would you like to order some pastries? (Enter Yes or No)");
 
-      string pastryAnswer = Console.ReadLine();
-      // if (pastryAnswer != "Y" || "N")
-      // {
-      //   Console.WriteLine("Please enter Y for Yes or N for No");
-      // }
-      if (pastryAnswer == "Y")
+      string initialPastryAnswer = Console.ReadLine();
+      string pastryAnswer = initialPastryAnswer.ToLower();
+      if (pastryAnswer == "yes")
       {
         Console.WriteLine("How many pastries would you like?");
         string stringAmount = Console.ReadLine();
         int amount = int.Parse(stringAmount);
-        Pastry newPastryOrder = new Pastry(amount);
+        newPastryOrder.Amount = amount;
       }
-      else
+      else 
       {
         Console.WriteLine("Don't have much of a sweet tooth eh!?");
       }
 
       Console.WriteLine("Thanks for coming in! Your Order Total is:");
-      Console.WriteLine(newBreadOrder.BreadCost() + newPastryOrder.PastryCost());
+      Console.WriteLine("$" + (newBreadOrder.BreadCost() + newPastryOrder.PastryCost()));
     }
   }
 }
